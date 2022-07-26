@@ -2,4 +2,4 @@ spring:
   data:
     elasticsearch:
       cluster-name: docker-cluster
-      cluster-nodes: 192.168.226.130:9300
+      cluster-nodes: localhost:9100

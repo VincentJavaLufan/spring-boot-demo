@@ -4,13 +4,13 @@
 
 ## 注意
 
-作者编写本demo时，ElasticSearch版本为 `6.5.3`，使用 docker 运行，下面是所有步骤：
+作者编写本demo时，ElasticSearch版本为 `7.6.1`，使用 docker 运行，下面是所有步骤：
 
-1. 下载镜像：`docker pull elasticsearch:6.5.3`
+1. 下载镜像：`docker pull elasticsearch:7.6.1`
 
-2. 创建或者运行容器：`docker run -d -p 9200:9200 -p 9300:9300 --name elasticsearch-6.5.3 elasticsearch:6.5.3`
+2. 创建或者运行容器：`docker run -d -p 9200:9200 -p 9300:9300 --name elasticsearch-6.5.3 elasticsearch:7.6.1`
 
-3. 进入容器：`docker exec -it elasticsearch-6.5.3 /bin/bash`
+3. 进入容器：`docker exec -it elasticsearch-7.6.1 /bin/bash`
 
 4. 安装 ik 分词器：`./bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v6.5.3/elasticsearch-analysis-ik-6.5.3.zip`
 
@@ -32,9 +32,9 @@
 
 6. 退出容器：`exit`
 
-7. 停止容器：`docker stop elasticsearch-6.5.3`
+7. 停止容器：`docker stop elasticsearch-7.6.1`
 
-8. 启动容器：`docker start elasticsearch-6.5.3`
+8. 启动容器：`docker start elasticsearch-7.6.1`
 
 ## pom.xml
 

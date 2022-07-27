@@ -6,6 +6,7 @@ import com.google.common.collect.Lists;
 import com.xkcoding.elasticsearch.SpringBootDemoElasticsearchApplicationTests;
 import com.xkcoding.elasticsearch.model.Person;
 import lombok.extern.slf4j.Slf4j;
+import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
@@ -15,6 +16,7 @@ import org.elasticsearch.search.sort.SortBuilders;
 import org.elasticsearch.search.sort.SortOrder;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -36,6 +38,20 @@ import java.util.List;
 public class PersonRepositoryTest extends SpringBootDemoElasticsearchApplicationTests {
     @Autowired
     private PersonRepository repo;
+
+    @Autowired
+    @Qualifier("restHighLevelClient")
+    private RestHighLevelClient restHighLevelClient;
+
+    /**
+     * 测试新增index
+     */
+//    @Test
+//    public void addIndex() throws IOException {
+//        CreateIndexRequest request = new CreateIndexRequest("fan_index");
+//        CreateIndexResponse response = restHighLevelClient.indices().create(request, RequestOptions.DEFAULT);
+//        System.out.println(response);
+//    }
 
     /**
      * 测试新增
